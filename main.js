@@ -16,6 +16,12 @@ function pop() {
         balloon_el.style.display = 'block';
       }, 1000);
     });
+     balloon_el.addEventListener('touchstart', () => {
+      balloon_el.style.display = 'none';
+      setTimeout(() => {
+        balloon_el.style.display = 'block';
+      }, 1000);
+    });
     const triangle_el = document.createElement('div');
     triangle_el.classList.add('triangle');
     triangle_el.style.borderBottom = balloon_el.style.background + '7px solid';
